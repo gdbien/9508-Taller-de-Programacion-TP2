@@ -6,7 +6,9 @@ const char* ClosedInventoryException:: what() const throw() {
 	return "Inventory is closed";	
 }
 
-ProtectedInventory::ProtectedInventory() : isClosed(false) {}
+ProtectedInventory::ProtectedInventory() : isClosed(false),
+										   inv({{WHEAT,0}, {WOOD,0},
+										   {CARBON,0}, {IRON,0}}) {}
 
 ProtectedInventory::~ProtectedInventory() {}
 
